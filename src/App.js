@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
 import SearchBar from './Components/SearchBar';
-import ShoopingListDisplay from './Components/ShoopingList';
+import ChickenPrices from './Arrays/ChickensList';
+import GroundBeefPrices from './Arrays/GroundBeefs';
+import TopSirloinCapPrices from './Arrays/TopsirLoinCap';
 function App() {
   return (
     <div className="App">
       <div>
        <SearchBar/>
       </div>
-      <ShoopingListDisplay/>
+      <ChickenPrices/>
+      <GroundBeefPrices/>
+      <TopSirloinCapPrices/>
     </div>
   );
 }
