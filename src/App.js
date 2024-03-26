@@ -1,18 +1,29 @@
 import React from 'react';
 import './App.css';
-import SearchBar from './Components/SearchBar';
-import ChickenPrices from './Arrays/ChickensList';
-import GroundBeefPrices from './Arrays/GroundBeefs';
-import TopSirloinCapPrices from './Arrays/TopsirLoinCap';
+import ChickenPrices from './Arrays/ChickenPrices';
+import GroundBeefPrices from './Arrays/GroundBeefPrices';
+import TopSirloinCapPrices from './Arrays/TopsirLoinCapPrices';
+import { Container, Row, Col } from 'reactstrap';
 function App() {
   return (
     <div className="App">
-      <div>
-       <SearchBar/>
-      </div>
-      <ChickenPrices/>
-      <GroundBeefPrices/>
-      <TopSirloinCapPrices/>
+      <Container>
+      <Row>
+        <Col>
+          <TopSirloinCapPrices/>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <GroundBeefPrices/>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <ChickenPrices/>
+        </Col>
+      </Row>
+    </Container>
     </div>
   );
 }
