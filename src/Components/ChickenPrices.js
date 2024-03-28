@@ -1,65 +1,16 @@
 import Chicken from '../img/Chickenbreast.jpg';
+import { ChickenBreastList } from '../shared/chickenBreast';
 import { Card, CardBody, CardTitle, CardText, Row, Col, ListGroup, ListGroupItem} from 'reactstrap';
 
-const ChickensList = [
-    {
-        id: 0,
-        name: 'ChickenBreast',
-        RegularPrice: '11$/Kg',
-        Location: 'Walmart',
-        LowestPrice: '9.99$/Kg'
 
-    },
-    {
-        id: 1,
-        name: 'ChickenBreast',
-        RegularPrice: '15$/Kg',
-        Location: 'SafeWay',
-        LowestPrice: '9.99$/Kg'
-
-    },
-    {
-        id: 2,
-        name: 'ChickenBreast',
-        RegularPrice: '17$/Kg',
-        Location: 'SafeOnFood',
-        LowestPrice: '9.99$/Kg'
-
-    },
-    {
-        id: 3,
-        name: 'ChickenBreast',
-        RegularPrice: '14.55$/Kg',
-        Location: 'SuperStore',
-        LowestPrice: '9.99$/Kg'
-
-    },
-    {
-        id: 4,
-        name: 'ChickenBreast',
-        RegularPrice: '15.99$/Kg',
-        Location: 'Costco',
-        LowestPrice: '9.99$/Kg'
-
-    },
-    {
-        id: 5,
-        name: 'ChickenBreast',
-        RegularPrice: '12.99$/Kg',
-        Location: 'NoFrill',
-        LowestPrice: '9.99$/Kg'
-
-    }
-]
-
-ChickensList.sort((a, b) => parseFloat(a.RegularPrice) - parseFloat(b.RegularPrice));
+ChickenBreastList.sort((a, b) => parseFloat(a.RegularPrice) - parseFloat(b.RegularPrice));
 
 const ChickenPrices = () => {
     return (
       <div>
         <h2>Chicken Prices</h2>
         <Row noGutters>
-          {ChickensList.map(chickenbreast => (
+          {ChickenBreastList.map(chickenbreast => (
             <Col key={chickenbreast.id} xs={12} sm= {6} md={4} lg={2}>
               <Card 
               style= {{
