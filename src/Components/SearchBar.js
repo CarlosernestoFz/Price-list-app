@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Button } from 'reactstrap';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, itemList }) => {
   const [query, setQuery] = useState('');
 
   const handleInputChange = (event) => {
@@ -9,7 +9,10 @@ const SearchBar = ({ onSearch }) => {
   };
 
   const handleSearch = () => {
-    onSearch(query);
+    const filteredList = itemList.filter(item =>
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+    onSearch(filteredList);
   };
 
   return (

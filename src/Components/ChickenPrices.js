@@ -1,3 +1,4 @@
+import React, {useState } from 'react';
 import Chicken from '../img/Chickenbreast.jpg';
 import { ChickenBreastList } from '../shared/chickenBreast';
 import { Card, CardBody, CardTitle, CardText, Row, Col, ListGroup, ListGroupItem} from 'reactstrap';
@@ -6,6 +7,11 @@ import { Card, CardBody, CardTitle, CardText, Row, Col, ListGroup, ListGroupItem
 ChickenBreastList.sort((a, b) => parseFloat(a.RegularPrice) - parseFloat(b.RegularPrice));
 
 const ChickenPrices = () => {
+  const [filteredItems, setFilteredItems] = useState(ChickenBreastList);
+
+  const handleSearch = (filteredItems) => {
+    setFilteredItems(filteredItems);
+  };
     return (
       <div>
         <h2>Chicken Prices</h2>

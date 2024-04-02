@@ -4,10 +4,11 @@ import ChickenPrices from './components/ChickenPrices';
 import GroundBeefPrices from './components/GroundBeefPrices';
 import TopSirloinCapPrices from './components/TopsirLoinCapPrices';
 import { Container, Row, Col } from 'reactstrap';
+import Home from './pages/HomePage';
 function App() {
   return (
     <div className="App">
-      <Container>
+      {/* <Container>
       <Row>
         <Col>
           <TopSirloinCapPrices/>
@@ -23,7 +24,8 @@ function App() {
           <ChickenPrices/>
         </Col>
       </Row>
-    </Container>
+    </Container> */}
+    <Home/>
     </div>
   );
 }
