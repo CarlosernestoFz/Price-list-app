@@ -16,7 +16,7 @@ const EggsPrices = () => {
               }}>
                 <img 
                 alt='chickenbreast'
-                src={Chicken}
+                src={''}
                 />
                 <CardBody>
                     <CardTitle tag="h5">Name: {Eggs.name}</CardTitle>

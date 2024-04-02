@@ -16,7 +16,7 @@ const OrganicEggsPrices = () => {
               }}>
                 <img 
                 alt='chickenbreast'
-                src={Chicken}
+                src={''}
                 />
                 <CardBody>
                     <CardTitle tag="h5">Name: {organicegg.name}</CardTitle>

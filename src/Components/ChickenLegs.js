@@ -1,7 +1,7 @@
 import { Card, CardBody, CardTitle, CardText, Row, Col, ListGroup, ListGroupItem} from 'reactstrap';
 import { ChickensLegsList } from '../shared/chickenLegs';
 
-ChickenLegsList.sort((a, b) => parseFloat(a.RegularPrice) - parseFloat(b.RegularPrice));
+ChickensLegsList.sort((a, b) => parseFloat(a.RegularPrice) - parseFloat(b.RegularPrice));
 
 const ChickenlegsPrices = () => {
     return (
@@ -9,29 +9,29 @@ const ChickenlegsPrices = () => {
         <h2>Chicken Prices</h2>
         <Row noGutters>
           {ChickensLegsList.map(chickenlegs => (
-            <Col key={chickenLegs.id} xs={12} sm= {6} md={4} lg={2}>
+            <Col key={chickenlegs.id} xs={12} sm= {6} md={4} lg={2}>
               <Card 
               style= {{
                 height: '100%', display: 'flex', flexDirection:'column'
               }}>
                 <img 
                 alt='chickenbreast'
-                src={Chicken}
+                src={''}
                 />
                 <CardBody>
-                    <CardTitle tag="h5">Name: {chickenLegs.name}</CardTitle>
+                    <CardTitle tag="h5">Name: {chickenlegs.name}</CardTitle>
                    <CardText> Information </CardText>
                 </CardBody>
                   <CardBody>
                   <ListGroup flush>
                     <ListGroupItem>
-                       <CardText>Regular Price: {chickenLegs.RegularPrice}</CardText>
+                       <CardText>Regular Price: {chickenlegs.RegularPrice}</CardText>
                     </ListGroupItem>
                     <ListGroupItem>
-                       <CardText>Location: {chickenLegs.Location}</CardText>
+                       <CardText>Location: {chickenlegs.Location}</CardText>
                     </ListGroupItem>
                     <ListGroupItem>
-                       <CardText>Lowest Price: {chickenLegs.LowestPrice}</CardText>
+                       <CardText>Lowest Price: {chickenlegs.LowestPrice}</CardText>
                     </ListGroupItem>
                   </ListGroup>  
                   </CardBody>

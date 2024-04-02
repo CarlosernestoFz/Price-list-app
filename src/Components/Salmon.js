@@ -17,7 +17,7 @@ const SalmonPrices = () => {
               }}>
                 <img 
                 alt='chickenbreast'
-                src={Chicken}
+                src={''}
                 />
                 <CardBody>
                     <CardTitle tag="h5">Name: {salmon.name}</CardTitle>

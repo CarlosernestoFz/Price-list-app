@@ -16,13 +16,21 @@ const SearchBar = ({ onSearch, itemList }) => {
   };
 
   return (
-    <div className="search-bar">
-      <Input 
-        placeholder="Search..." 
-        value={query} 
-        onChange={handleInputChange} 
-      />
-      <Button color="primary" onClick={handleSearch}>Search</Button>
+    <div>
+      <div className="search-bar d-flex justify-content-center align-items-center">
+        <Input
+          style={{width: '400px', textAlign:'center', backgroundColor: '', color: '#333333'}}
+          placeholder="Search ..." 
+          value={query} 
+          onChange={handleInputChange}>
+        </Input>
+      </div>    
+      <div className="search-bar d-flex justify-content-center align-items-center">
+          <Button color="primary"
+          style={{width: '100px', backgroundColor: '#e6f7ff', color: '#333333', border:'none', marginTop:'5px'}}
+          onClick={handleSearch}>Search
+        </Button>
+      </div>
     </div>
   );
 };
